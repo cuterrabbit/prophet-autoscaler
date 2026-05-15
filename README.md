@@ -88,20 +88,6 @@ spec:
 
 ```
 prophet-autoscaler/
-├── data/                              # 생성된 데이터 / 예측 결과 / 그래프
-│   ├── dummy_request_rate.csv         # 학습 데이터 (2년치, 17,521행)
-│   ├── dummy_cpu_utilization.csv      # CPU 학습 데이터
-│   ├── dummy_anomaly_events.csv       # 이상치 시나리오 정보
-│   ├── predictions_request_rate.csv   # 24시간 예측 (baseline)
-│   ├── predictions_annual_2025.csv    # 연간 예측 (baseline)
-│   ├── predictions_log_*.csv          # 예측 결과 (최적화)
-│   └── plot_*.png                     # 시각화 결과
-│
-├── models/                            # 학습된 모델
-│   ├── request-rate-forecast.pkl      # baseline 모델
-│   ├── request-rate-forecast-log.pkl  # 최적화 모델 (로그 변환)
-│   └── runs.json                      # 실험 기록 (MLflow 대체)
-│
 ├── src/                               # baseline 구현
 │   ├── generate_dummy_data.py         # 모듈 1: 더미 데이터 생성
 │   ├── train_predict.py               # 모듈 2: 학습 / 예측
